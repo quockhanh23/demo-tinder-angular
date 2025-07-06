@@ -1,0 +1,111 @@
+<div class="wrap1">
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <h1>Tin-Tinder</h1>
+      </div>
+      <div class="menu">
+        <ul class="sf-menu" id="example">
+          <li (click)="isLogin()"><a>Đăng nhập</a></li>
+          <li (click)="isRegister()"><a>Đăng ký</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearing"></div>
+  </div>
+  <div class="clearing"></div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="wrap2">
+        <div class="container">
+          <div class="banner">
+            <img style="width: 100%" src="assets/images/banner-img.jpg" alt="banner"/>
+          </div>
+        </div>
+        <div class="clearing"></div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div *ngIf="checkLogin && !checkRegister">
+
+      </div>
+      <div *ngIf="!checkLogin && checkRegister">
+
+      </div>
+    </div>
+    <div class="wrap3">
+      <div class="container">
+        <div class="box mar-right40">
+          <div class="title">
+            <h1>Corem ipsum dolor</h1>
+            <h2>Donec eu erat lacusaecenas et tortor quam phar.</h2>
+          </div>
+          <div class="content">
+            <p>Một nụ cười và một nụ cười ấm áp. Số nguyên ultressiem sem, et libendum ghét volutpat a.
+              ngoại trừ xe cộ. Người ta nói với Aenean rằng cây cung đẹp đẽ nhưng hãy mang xe đến cổng tự do
+              dui ligula feugiat diam, mollis sodales felis augue et eros</p>
+            <div class="button"><a href="#">More Info </a></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="title">
+            <h1>Kuisoue ullam risus</h1>
+            <h2>Maecenas convallis rhoncus auctor lipsum dolor.</h2>
+          </div>
+          <div class="content">
+            <p>Etiam non tristique sapien. Donec id nunc mauris, et placerat felis. Mauris egestas nunc consectetur dui
+              mattis tempus. Morbi sed dui eget sapien faucibus tincidunt. Sed convallis odio quis ipsum ullamcorper
+              moll
+              venenatis aecenas commodo ante et dolor conse.</p>
+            <div class="button"><a href="#">More Info </a></div>
+          </div>
+        </div>
+        <div class="clearing"></div>
+      </div>
+    </div>
+    <!---wrap3--->
+    <div class="wrap1 ">
+      <div class="container">
+        <div class="title">
+          <h1>Vivamus euismod lacus at mi eleifend volutpat.</h1>
+        </div>
+        <div class="service mar-right40"><img src="assets/images/image1.jpg" alt="image"/>
+          <div class="shadows"></div>
+          <div class="title">
+            <h2>Nam faucibus adipis</h2>
+          </div>
+          <div class="content">
+            <p>Curabitur erat velit, tincidunt non hendrerit ac eleifend eu nisl. Nullam auctor dapibus justo, ac
+              ultrices.</p>
+            <div class="button"><a href="#">More Info </a></div>
+          </div>
+        </div>
+        <div class="service mar-right40"><img src="assets/images/image2.jpg" alt="image"/>
+          <div class="shadows"></div>
+          <div class="title">
+            <h2>Imperdiet risus luctu</h2>
+          </div>
+          <div class="content">
+            <p>Aliquam consectetur aliquam nulla a pharetra. Mauris mauris mi, viverra cuis posuere sit posuereante.</p>
+            <div class="button"><a href="#">More Info </a></div>
+          </div>
+        </div>
+        <div class="service"><img src="assets/images/image3.jpg" alt="image"/>
+          <div class="shadows"></div>
+          <div class="title">
+            <h2>Eleifend eunisl auctor</h2>
+          </div>
+          <div class="content">
+            <p>Sed convallis odio quis ipsum ullamcorper mollis. Sed venenatis ante sed nisi egestas eu aliquam
+              neque. </p>
+            <div class="button"><a href="#">More Info </a></div>
+          </div>
+        </div>
+        <div class="clearing"></div>
+      </div>
+      <div class="clearing"></div>
+    </div>
+  </div>
+</div>
