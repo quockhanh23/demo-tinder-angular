@@ -14,6 +14,7 @@ import {LoginComponent} from './share/login/login.component';
 import {RegisterComponent} from './share/register/register.component';
 import {UserListComponent} from './user/user-list/user-list.component';
 import {UserDetailComponent} from "./user/user-detail/user-detail.component";
+import { ChatComponent } from './chat/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {UserDetailComponent} from "./user/user-detail/user-detail.component";
     RegisterComponent,
     UserDetailComponent,
     UserListComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
