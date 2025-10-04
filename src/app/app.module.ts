@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DialogComponent} from './dialog/dialog.component';
+import {DialogComponent} from './share/dialog/dialog.component';
 import {MaterialModule} from "./material/material.module";
 import {ToastrModule} from "ngx-toastr";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -14,7 +14,9 @@ import {LoginComponent} from './share/login/login.component';
 import {RegisterComponent} from './share/register/register.component';
 import {UserListComponent} from './user/user-list/user-list.component';
 import {UserDetailComponent} from "./user/user-detail/user-detail.component";
-import { ChatComponent } from './chat/chat/chat.component';
+import {ChatComponent} from './chat/chat/chat.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,6 +34,9 @@ import { ChatComponent } from './chat/chat/chat.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
     ToastrModule.forRoot(),

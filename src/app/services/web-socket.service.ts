@@ -15,7 +15,7 @@ export class WebSocketService {
   connect(): void {
     const socket = new SockJS('http://localhost:8080/ws');
     this.stompClient = Stomp.over(socket);
-    this.stompClient.debug = () => {}; // Tắt log nếu cần
+    this.stompClient.debug = () => {};
 
     this.stompClient.connect({}, (frame: any) => {
       console.log('Connected: ' + frame);

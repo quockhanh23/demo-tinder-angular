@@ -5,6 +5,7 @@ import {RegisterComponent} from "./share/register/register.component";
 import {IntroComponent} from "./share/intro/intro.component";
 import {UserListComponent} from "./user/user-list/user-list.component";
 import {UserDetailComponent} from "./user/user-detail/user-detail.component";
+import {ChatComponent} from "./chat/chat/chat.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   },
   {
     path: '', component: IntroComponent,
+  },
+  {
+    path: 'chat/:id', component: ChatComponent,
   },
 ];
 

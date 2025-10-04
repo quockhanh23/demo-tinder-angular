@@ -1,1 +1,90 @@
-<p>chat works!</p>
+<div class="container chat-app">
+  <div class="row g-3">
+    <div class="col-12 col-md-4">
+      <div class="card sidebar p-2">
+        <div class="d-flex align-items-center mb-2">
+          <input class="form-control form-control-sm me-2" id="search" placeholder="Tìm kiếm" />
+          <button class="btn btn-sm btn-primary"><i class="fa fa-plus"></i></button>
+        </div>
+
+        <!-- List -->
+        <div id="chatList">
+          <!-- Mỗi item là .chat-item -->
+          <div class="chat-item d-flex align-items-center" data-name="Nguyễn An" data-avatar="https://i.pravatar.cc/100?img=12">
+            <img src="https://i.pravatar.cc/100?img=12" class="avatar-sm me-2" alt="avatar">
+            <div class="flex-grow-1">
+              <div class="fw-semibold">Nguyễn An</div>
+              <div class="text-muted small">Chào! Hôm nay ổn chứ?</div>
+            </div>
+            <div class="text-muted small">12:04</div>
+          </div>
+
+          <div class="chat-item d-flex align-items-center" data-name="Linh Trần" data-avatar="https://i.pravatar.cc/100?img=5">
+            <img src="https://i.pravatar.cc/100?img=5" class="avatar-sm me-2" alt="avatar">
+            <div class="flex-grow-1">
+              <div class="fw-semibold">Linh Trần</div>
+              <div class="text-muted small">Đã gửi ảnh</div>
+            </div>
+            <div class="text-muted small">Hôm qua</div>
+          </div>
+
+          <div class="chat-item d-flex align-items-center" data-name="Team Dev" data-avatar="https://i.pravatar.cc/100?img=20">
+            <img src="https://i.pravatar.cc/100?img=20" class="avatar-sm me-2" alt="avatar">
+            <div class="flex-grow-1">
+              <div class="fw-semibold">Team Dev</div>
+              <div class="text-muted small">3 thành viên online</div>
+            </div>
+            <div class="text-muted small">2 ngày</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Khu vực chat -->
+    <div class="col-12 col-md-8">
+      <div class="chat-window">
+        <!-- Header -->
+        <div class="chat-header">
+          <img id="currAvatar" src="https://i.pravatar.cc/100?img=12" class="avatar-sm" alt="avatar">
+          <div>
+            <div id="currName" class="fw-bold">Nguyễn An</div>
+            <div id="currStatus" class="text-muted small">Hoạt động gần đây</div>
+          </div>
+          <div class="ms-auto d-flex gap-2">
+            <button class="btn btn-sm" title="Video"><i class="fa fa-video"></i></button>
+            <button class="btn btn-sm" title="Call"><i class="fa fa-phone"></i></button>
+            <button class="btn btn-sm" title="Info"><i class="fa fa-info-circle"></i></button>
+          </div>
+        </div>
+
+        <!-- Tin nhắn -->
+        <div id="messages" class="messages">
+          <!-- sample messages -->
+          <div class="msg-row other">
+            <img src="https://i.pravatar.cc/100?img=12" class="avatar-sm" alt="avatar">
+            <div class="msg other">Chào bạn! Hôm nay có cần giúp gì không?</div>
+          </div>
+
+          <div class="msg-row me">
+            <div class="msg me">Mình đang làm thử giao diện chat, nhìn giống Facebook không?</div>
+          </div>
+
+          <div class="msg-row other">
+            <img src="https://i.pravatar.cc/100?img=12" class="avatar-sm" alt="avatar">
+            <div class="msg other">Rất ổn! Thêm emoji nữa là tuyệt.</div>
+          </div>
+        </div>
+
+        <!-- Input -->
+        <div class="chat-input">
+          <div class="input-area">
+            <button id="btnEmoji" class="btn btn-light" title="Emoji"><i class="fa fa-face-smile"></i></button>
+            <input id="messageInput" type="text" class="form-control" placeholder="Nhập tin nhắn... (Enter để gửi)">
+            <button id="btnAttach" class="btn btn-light" title="Đính kèm"><i class="fa fa-paperclip"></i></button>
+            <button id="btnSend" class="btn btn-primary">Gửi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
