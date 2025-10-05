@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Subject} from "rxjs";
 
 declare var SockJS: any;
@@ -12,21 +12,24 @@ export class WebSocketService {
   private stompClient: any;
   private messageSubject = new Subject<any>();
 
-  connect(): void {
+  connect(userId: number, onMessage: (msg: any) => void) {
     const socket = new SockJS('http://localhost:8080/ws');
     this.stompClient = Stomp.over(socket);
-    this.stompClient.debug = () => {};
 
-    this.stompClient.connect({}, (frame: any) => {
-      console.log('Connected: ' + frame);
-      this.stompClient.subscribe('/topic/public', (message: any) => {
-        this.messageSubject.next(JSON.parse(message.body));
-      });
+    this.stompClient.connect({}, () => {
+      this.stompClient?.subscribe(
+        `/user/${userId}/queue/messages`,
+        (message: any) => {
+          if (message.body) {
+            onMessage(JSON.parse(message.body));
+          }
+        }
+      );
     });
   }
 
-  sendMessage(msg: any): void {
-    this.stompClient.send('/app/chat.sendMessage', {}, JSON.stringify(msg));
+  sendMessage(chatMessage: any) {
+    this.stompClient?.send('/app/chat', {}, JSON.stringify(chatMessage));
   }
 
   getMessages() {
